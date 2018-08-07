@@ -12,7 +12,7 @@ header-includes:
     \usepackage{indentfirst}
     \usepackage{geometry}
     \setlength{\parindent}{2em}
-    \geometry{a4paper,scale=0.8}
+    \geometry{a4paper,top=1in,bottom=1in,left=1in,right=1in}
 ---
 
 # 前·赤壁赋
