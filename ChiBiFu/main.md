@@ -5,14 +5,18 @@ date: 公元二〇一八年七月八日
 output:
     pdf_document:
         pdf_engine: xelatex
-        #toc: 1
-        number_sections: 1
-header-includes:
-    \usepackage{ctex}
-    \usepackage{indentfirst}
-    \usepackage{geometry}
-    \setlength{\parindent}{2em}
-    \geometry{a4paper,top=1in,bottom=1in,left=1in,right=1in}
+papersize: a4
+fontsize: 11pt
+documentclass: ctexart
+classoption: oneside
+geometry: scale=0.8
+linestretch: 2.0
+indent: true
+hyperrefoptions: linktoc=all
+#toc: true
+#numbersections: true
+#header-includes:
+    #\usepackage{ctex}
 ---
 
 # 前·赤壁赋
