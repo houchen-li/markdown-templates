@@ -1,25 +1,49 @@
 ---
-title: 赤壁赋
-author: 苏轼
-date: 公元二〇一八年七月八日
+title: '赤壁赋'
+author:
+- '苏轼'
+date: '公元二〇一八年七月八日'
+#abstract:
+#- ''
 output:
     pdf_document:
-        pdf_engine: xelatex
-papersize: a4
-fontsize: 11pt
-documentclass: ctexart
-classoption: oneside
-geometry: scale=0.8
-linestretch: 2.0
+        pdf_engine: 'xelatex'
+        path: './main.pdf'
+        toc: true
+        #number_sections: true
+        includes:
+            in_header: 'header.tex'
+            before_body: 'doc_prefix.tex'
+            after_body: 'doc_suffix.tex'
+papersize: 'a4'
+#fontfamily: 'sourceserifpro'
+fontsize: '11pt'
+documentclass: 'book'
+classoption:
+- 'a4paper'
+- 'twoside'
+- 'openright'
+geometry:
+- 'a4paper'
+- 'left=1.5in'
+- 'right=1in'
+- 'top=1.2in'
+- 'bottom=1.2in'
+linestretch: '1.5'
 indent: true
-hyperrefoptions: linktoc=all
-#toc: true
-#numbersections: true
-#header-includes:
-    #\usepackage{ctex}
+#hyperrefoptions:
+#- 'linktoc=all'
+#export_on_save:
+    #pandoc: true
 ---
 
 # 前·赤壁赋
+
+《赤壁赋》是北宋文学家苏轼创作的一篇赋，作于宋神宗元丰五年（1082）贬谪黄州（今湖北黄冈）时。此赋记叙了作者与朋友们月夜泛舟游赤壁的所见所感，以作者的主观感受为线索，通过主客问答的形式，反映了作者由月夜泛舟的舒畅，到怀古伤今的悲咽，再到精神解脱的达观。全赋在布局与结构安排中映现了其独特的艺术构思，情韵深致、理意透辟，在中国文学上有着很高的文学地位，并对之后的赋、散文、诗产生了重大影响。([百度百科-赤壁赋][1])
+
+[1]: https://baike.baidu.com/item/%E8%B5%A4%E5%A3%81%E8%B5%8B/130?fr=aladdin
+
+## 正文
 
 壬戌之秋，七月既望，苏子与客泛舟游于赤壁之下。清风徐来，水波不兴。举酒属客，诵明月之诗，歌窈窕之章。少焉，月出于东山之上，徘徊于斗牛之间。白露横江，水光接天。纵一苇之所如，凌万顷之茫然。浩浩乎如冯虚御风，而不知其所止；飘飘乎如遗世独立，羽化而登仙。
 
@@ -32,6 +56,12 @@ hyperrefoptions: linktoc=all
 客喜而笑，洗盏更酌，肴核既尽，杯盘狼藉。相与枕藉乎舟中，不知东方之既白。
 
 # 后·赤壁赋
+
+《后赤壁赋》是北宋文学家苏轼创作的一篇赋，作于宋神宗元丰五年（1082）贬谪黄州（今湖北黄冈）时，是《赤壁赋》的姊妹篇。与前篇纯写江上泛舟不同，后篇记游，以登岸履险为主，也无谈玄说理的内容。文章前面记真景真情，通过毫不雕琢的天然佳句，给人一种壮阔的美感；中间对踞石攀木、俯江长啸的细致描写，真切地表达了作者月夜登临的情趣。最后写梦见道士化鹤，纯属幻境幻觉，空灵奇幻，迷离恍惚，从中表现了作者内心怅然若失的苦闷。([百度百科-后赤壁赋][2])
+
+[2]:https://baike.baidu.com/item/%E5%90%8E%E8%B5%A4%E5%A3%81%E8%B5%8B/1658761?fr=aladdin
+
+## 正文
 
 是岁十月之望，步自雪堂，将归于临皋。二客从予过黄泥之坂。霜露既降，木叶尽脱，人影在地，仰见明月，顾而乐之，行歌相答。已而叹曰：“有客无酒，有酒无肴，月白风清，如此良夜何！”客曰：“今者薄暮，举网得鱼，巨口细鳞，状如松江之鲈。顾安所得酒乎？”归而谋诸妇。妇曰：“我有斗酒，藏之久矣，以待子不时之需。”于是携酒与鱼，复游于赤壁之下。江流有声，断岸千尺；山高月小，水落石出。曾日月之几何，而江山不可复识矣。予乃摄衣而上，履谗岩，披蒙茸，踞虎豹，登虬龙，攀栖鹘之危巢，俯冯夷之幽宫。盖二客不能从焉。划然长啸，草木震动，山鸣谷应，风起水涌。予亦悄然而悲，肃然而恐，凛乎其不可留也。反而登舟，放乎中流，听其所止而休焉。时夜将半，四顾寂寥。适有孤鹤，横江东来。翅如车轮，玄裳缟衣，戛然长鸣，掠予舟而西也。
 
