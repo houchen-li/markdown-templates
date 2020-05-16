@@ -26,20 +26,21 @@ geometry:
 - 'top=1.2in'
 - 'bottom=1.2in'
 linestretch: '1.5'
-indent: true
+#indent: true
 toc: true
 #numbersections: true
 #hyperrefoptions:
 #- 'linktoc=all'
 bibliography:
-- 'refs/refs.bib'
-#export_on_save:
-    #pandoc: true
+- 'refs/bibliography.bib'
+csl: 'refs/american-physics-society.csl'
+export_on_save:
+    pandoc: true
 ---
 
 # 前·赤壁赋
 
-《赤壁赋》是北宋文学家苏轼创作的一篇赋，作于宋神宗元丰五年（1082）贬谪黄州（今湖北黄冈）时。此赋记叙了作者与朋友们月夜泛舟游赤壁的所见所感，以作者的主观感受为线索，通过主客问答的形式，反映了作者由月夜泛舟的舒畅，到怀古伤今的悲咽，再到精神解脱的达观。全赋在布局与结构安排中映现了其独特的艺术构思，情韵深致、理意透辟，在中国文学上有着很高的文学地位，并对之后的赋、散文、诗产生了重大影响。[^1]
+《赤壁赋》是北宋文学家苏轼创作的一篇赋[@Einstein2012]，作于宋神宗元丰五年（1082）贬谪黄州（今湖北黄冈）时。此赋记叙了作者与朋友们月夜泛舟游赤壁的所见所感，以作者的主观感受为线索，通过主客问答的形式，反映了作者由月夜泛舟的舒畅，到怀古伤今的悲咽，再到精神解脱的达观。全赋在布局与结构安排中映现了其独特的艺术构思，情韵深致、理意透辟，在中国文学上有着很高的文学地位，并对之后的赋、散文、诗产生了重大影响。[^1]
 
 [^1]: [百度百科-赤壁赋](https://baike.baidu.com/item/%E8%B5%A4%E5%A3%81%E8%B5%8B/130?fr=aladdin)
 
