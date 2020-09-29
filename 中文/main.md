@@ -3,8 +3,8 @@ title: '赤壁赋'
 author:
 - '苏轼'
 date: '公元二〇一八年七月八日'
-#abstract:
-#- '二《赤壁》俱是夜游。此篇十二易韵，以江风山月作骨，前面步步点出，一泛舟间，胜游已毕，坡翁忽借对境感慨之意，现前指点，发出许多大议论。然以江山无穷，音生有尽，尚论古人遗迹，欷歔凭吊。虽文人悲秋常调，但从吹箫和歌声中引入，则文境奇。其论曹公之诗、曹公之事，低回流连，两叠而出，则文致奇。盛言曹公英雄，较论我生微细，蜉蝣短景，对境易哀，则文势奇。迨至以水、月为喻，发出正论，则《南华》、《楞严》之妙理，可以包络天地，伭同造化，尤非文人梦想所能到也。'
+abstract:
+- '二《赤壁》俱是夜游。此篇十二易韵，以江风山月作骨，前面步步点出，一泛舟间，胜游已毕，坡翁忽借对境感慨之意，现前指点，发出许多大议论。然以江山无穷，音生有尽，尚论古人遗迹，欷歔凭吊。虽文人悲秋常调，但从吹箫和歌声中引入，则文境奇。其论曹公之诗、曹公之事，低回流连，两叠而出，则文致奇。盛言曹公英雄，较论我生微细，蜉蝣短景，对境易哀，则文势奇。迨至以水、月为喻，发出正论，则《南华》、《楞严》之妙理，可以包络天地，伭同造化，尤非文人梦想所能到也。'
 output:
     pdf_document:
         pdf_engine: 'xelatex'
@@ -13,18 +13,35 @@ output:
             in_header: 'header.tex'
             before_body: 'doc_prefix.tex'
             after_body: 'doc_suffix.tex'
-papersize: 'a4'
-#fontfamily: 'sourceserifpro'
-fontsize: '11pt'
+	pandoc_args:
+    - '--filter=pandoc-crossref'
+    - '--filter=pandoc-citeproc'
 documentclass: 'report'
 classoption:
 - 'twoside'
 - 'openright'
+papersize: 'a4'
 geometry:
 - 'left=1.5in'
 - 'right=1in'
 - 'top=1.2in'
 - 'bottom=1.2in'
+fontenc: 'T1'
+fontsize: '11pt'
+mainfont: NewComputerModern
+mainfontoptions:
+- 'Extension=.otf'
+- 'UprightFont=NewCM10-Regular'
+- 'BoldFont=NewCM10-Bold'
+- 'ItalicFont=NewCM10-Italic'
+- 'BoldItalicFont=NewCM10-BoldItalic'
+CJKmainfont: 'Source Han Serif CN'
+CJKoptions:
+#- 'Extension=.otf'
+- 'UprightFont=Source Han Serif CN'
+- 'BoldFont=Source Han Serif CN Bold'
+- 'ItalicFont=Adobe Kaiti Std'
+#- 'BoldItalicFont='
 linestretch: '1.5'
 indent: true
 toc: true
@@ -33,7 +50,7 @@ toc: true
 #- 'linktoc=all'
 bibliography:
 - 'refs/bibliography.bib'
-#csl: 'refs/american-physics-society.csl'
+csl: 'refs/american-physics-society.csl'
 export_on_save:
     pandoc: true
 ---

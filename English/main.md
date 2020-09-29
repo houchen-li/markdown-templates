@@ -3,8 +3,8 @@ title: 'Quantum Mechanics'
 author:
 - 'Wikipedia'
 date: 'May 16th, 2020'
-#abstract:
-#- 'Quantum mechanics is, at least at first glance and at least in part, a mathematical machine for predicting the behaviors of microscopic particles — or, at least, of the measuring instruments we use to explore those behaviors — and in that capacity, it is spectacularly successful: in terms of power and precision, head and shoulders above any theory we have ever had. Mathematically, the theory is well understood; we know what its parts are, how they are put together, and why, in the mechanical sense (i.e., in a sense that can be answered by describing the internal grinding of gear against gear), the whole thing performs the way it does, how the information that gets fed in at one end is converted into what comes out the other. The question of what kind of a world it describes, however, is controversial; there is very little agreement, among physicists and among philosophers, about what the world is like according to quantum mechanics. Minimally interpreted, the theory describes a set of facts about the way the microscopic world impinges on the macroscopic one, how it affects our measuring instruments, described in everyday language or the language of classical mechanics. Disagreement centers on the question of what a microscopic world, which affects our apparatuses in the prescribed manner, is, or even could be, like intrinsically; or how those apparatuses could themselves be built out of microscopic parts of the sort the theory describes.'
+abstract:
+- 'Quantum mechanics is, at least at first glance and at least in part, a mathematical machine for predicting the behaviors of microscopic particles — or, at least, of the measuring instruments we use to explore those behaviors — and in that capacity, it is spectacularly successful: in terms of power and precision, head and shoulders above any theory we have ever had. Mathematically, the theory is well understood; we know what its parts are, how they are put together, and why, in the mechanical sense (i.e., in a sense that can be answered by describing the internal grinding of gear against gear), the whole thing performs the way it does, how the information that gets fed in at one end is converted into what comes out the other. The question of what kind of a world it describes, however, is controversial; there is very little agreement, among physicists and among philosophers, about what the world is like according to quantum mechanics. Minimally interpreted, the theory describes a set of facts about the way the microscopic world impinges on the macroscopic one, how it affects our measuring instruments, described in everyday language or the language of classical mechanics. Disagreement centers on the question of what a microscopic world, which affects our apparatuses in the prescribed manner, is, or even could be, like intrinsically; or how those apparatuses could themselves be built out of microscopic parts of the sort the theory describes.'
 output:
     pdf_document:
         pdf_engine: 'pdflatex'
@@ -13,18 +13,28 @@ output:
             in_header: 'header.tex'
             before_body: 'doc_prefix.tex'
             after_body: 'doc_suffix.tex'
-papersize: 'a4'
-#fontfamily: 'sourceserifpro'
-fontsize: '11pt'
-documentclass: 'book'
+        pandoc_args:
+        - '--filter=pandoc-crossref'
+        - '--filter=pandoc-citeproc'
+documentclass: 'report'
 classoption:
 - 'twoside'
 - 'openright'
+papersize: 'a4'
 geometry:
 - 'left=1.5in'
 - 'right=1in'
 - 'top=1.2in'
 - 'bottom=1.2in'
+fontenc: 'T1'
+fontsize: '11pt'
+mainfont: NewComputerModern
+mainfontoptions:
+- 'Extension=.otf'
+- 'UprightFont=NewCM10-Regular'
+- 'BoldFont=NewCM10-Bold'
+- 'ItalicFont=NewCM10-Italic'
+- 'BoldItalicFont=NewCM10-BoldItalic'
 linestretch: '1.5'
 indent: true
 toc: true
@@ -40,9 +50,9 @@ export_on_save:
 
 # Introduction
 
-Quantum mechanics (QM; also known as quantum physics, quantum theory, the wave mechanical model and matrix mechanics), including quantum field theory, is a fundamental theory in physics. It describes advanced properties of nature on an atomic scale.[@Feynman1964]
+Quantum mechanics (QM; also known as quantum physics, quantum theory, the wave mechanical model and matrix mechanics), including quantum field theory, is a fundamental theory in physics. It describes advanced properties of nature on an atomic scale. [@Feynman1964]
 
-Classical physics, the description of physics that existed before the theory of relativity and quantum mechanics, describes many aspects of nature at a. ordinary (macroscopic) scale. Quantum mechanics also explains the aspects of nature at a small (atomic and subatomic) scales
+Classical physics, the description of physics that existed before the theory of relativity and quantum mechanics, describes many aspects of nature at a. ordinary (macroscopic) scale. Quantum mechanics also explains the aspects of nature at a small (atomic and subatomic) scales.
 
 Most theories in classical physics can be derived from quantum mechanics as an approximation valid at large (macroscopic) scale. Quantum mechanics differs from classical physics in that energy, momentum, angular momentum, and other quantities of a bound system are restricted to discrete values (quantization), objects have characteristics of both particles and waves (wave-particle duality), and there are limits to how accurately the value of a physical quantity can be predicted prior to its measurement, given a complete set of initial conditions (the uncertainty principle).
 
@@ -64,9 +74,7 @@ Max Planck corrected this model using Boltzmann's statistical interpretation of 
 
 Among the first to study quantum phenomena were Arthur Compton, C. V. Raman, and Pieter Zeeman, each of whom has a quantum effect named after him. Robert Andrews Millikan studied the photoelectric effect experimentally, and Albert Einstein developed a theory for it. At the same time, Ernest Rutherford experimentally discovered the nuclear model of the atom, and Niels Bohr developed a theory of atomic structure, confirmed by the experiments of Henry Moseley. In 1913, Peter Debye extended Bohr's theory by introducing elliptical orbits, a concept also introduced by Arnold Sommerfeld. This phase is known as old quantum theory.
 
-According to Planck, each energy element (E) is proportional to its frequency (\(\nu\)):
-\[E=h\nu,\]
-where h is Planck's constant.
+According to Planck, each energy element (E) is proportional to its frequency (\(\nu\)): \[E=h\nu,\] {#eq:photon-energy} where h is Planck's constant.
 
 Planck cautiously insisted that this was only an aspect of the processes of absorption and emission of radiation and was not the physical reality of the radiation. In fact, he considered his quantum hypothesis a mathematical trick to get the right answer rather than a sizable discovery. However, in 1905 Albert Einstein interpreted Planck's quantum hypothesis realistically and used it to explain the photoelectric effect, in which shining light on certain materials can eject electrons from the material. Einstein won the 1921 Nobel Prize in Physics for this work.
 
