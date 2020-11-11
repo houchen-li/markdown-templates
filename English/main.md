@@ -15,7 +15,7 @@ output:
             after_body: 'doc_suffix.tex'
         pandoc_args:
         - '--filter=pandoc-crossref'
-        - '--filter=pandoc-citeproc'
+        - '--citeproc'
 documentclass: 'report'
 classoption:
 - 'twoside'
